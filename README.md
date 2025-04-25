@@ -1,92 +1,69 @@
----
+# 🏏 Cric Fusion
 
-# MERN Blog Application
-
-![Node.js](https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white)
-![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)
-![Express.js](https://img.shields.io/badge/Express.js-404D59?style=for-the-badge)
-![JWT](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=json-web-tokens&logoColor=white)
-![Google OAuth](https://img.shields.io/badge/Google_OAuth-4285F4?style=for-the-badge&logo=google&logoColor=white)
-![Firebase](https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
-![Swagger](https://img.shields.io/badge/Swagger-85EA2D?style=for-the-badge&logo=swagger&logoColor=black)
-![Axios](https://img.shields.io/badge/Axios-5A29E4?style=for-the-badge)
-![Flowbite](https://img.shields.io/badge/Flowbite-38B2AC?style=for-the-badge&logo=flowbite&logoColor=white)
-![ESLint](https://img.shields.io/badge/ESLint-4B32C3?style=for-the-badge&logo=eslint&logoColor=white)
-![Nodemon](https://img.shields.io/badge/Nodemon-76D04B?style=for-the-badge&logo=nodemon&logoColor=white)
-![Git](https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white)
-
-
-A full-stack blog application built using the **MERN stack** (MongoDB, Express.js, React.js, Node.js). This application allows users to create, update, delete, and manage blog posts and comments. It includes authentication (JWT and Google OAuth), a like/dislike feature, and an admin panel for managing content.
+**Cric Fusion** is a dynamic full-stack MERN application that combines live cricket scores, blogging features, and real-time chat during matches. This platform is built for cricket enthusiasts who want to follow live updates, engage in passionate discussions, and share their thoughts through blogs.
 
 ---
 
-## Home Page
-![Home](image.png)
+## 🚀 Features
 
-## Swagger API Documentation
-![Swagger-Documentation](image-1.png)
+### 🏏 Live Cricket Scores
+- Real-time display of live cricket matches and scores using a cricket API.
+- Match statistics including teams, runs, overs, wickets, and player performances.
 
-## Features
+### ✍️ Blog Section
+- Create, read, update, and delete blogs related to cricket matches, players, and opinions.
+- Like/Dislike system for blogs.
+- Commenting system with support for comment likes.
 
-- **User Authentication**: Sign up, sign in, and social login with Google OAuth.
-- **Admin Panel**: Admin users can manage posts and comments.
-- **CRUD Operations**: Create, read, update, and delete blog posts and comments.
-- **Like/Dislike System**: Users can like or dislike posts, and admins can view detailed statistics of likes/dislikes.
-- **Commenting System**: Users can comment on blog posts with the ability to like comments.
-- **Responsive Design**: Built with modern UI components for a seamless user experience across devices.
-- **Fully Documented API**: All API endpoints are documented using Swagger for easy interaction with the backend.
+### 🔒 User Authentication
+- Sign up / Sign in with JWT.
+- Google OAuth for quick social login.
+- Role-based access: Users and Admins.
 
----
+### 💬 Live Match Chat
+- Real-time chat room enabled during live matches.
+- Users can join the chat to discuss the ongoing game.
+- Messages are displayed instantly using Socket.io (or Firebase Realtime DB).
 
-## Tech Stack
-
-**Frontend**:
-- React.js
-- Axios (for HTTP requests)
-- Flowbite (UI components)
-
-**Backend**:
-- Node.js
-- Express.js
-- MongoDB (with Mongoose)
-- JWT (JSON Web Token) for authentication
-- Google OAuth for social login
-- Swagger for API documentation
-
-**Other Tools**:
-- ESLint for code linting
-- Nodemon for development
+### 🛠 Admin Panel
+- Manage all posts and comments.
+- View detailed stats (likes/dislikes, post activity).
+- Moderate live chat messages.
 
 ---
 
-## Table of Contents
+## 🧰 Tech Stack
 
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Installation](#installation)
-- [API Documentation](#api-documentation)
-- [Usage](#usage)
-- [Environment Variables](#environment-variables)
-- [Contributing](#contributing)
-- [License](#license)
+### Frontend
+- **React.js**
+- **Axios**
+- **Flowbite** for modern UI components
+- **Firebase** (for real-time chat or notifications)
+
+### Backend
+- **Node.js**, **Express.js**
+- **MongoDB** (with Mongoose)
+- **JWT** for session management
+- **Google OAuth**
+- **Swagger** for API documentation
+- **Socket.io** (if used for chat)
+
+### Dev Tools
+- **ESLint**, **Nodemon**, **Git**
 
 ---
 
-## Installation
+## 📦 Installation
 
 ### Prerequisites
-
-Before you begin, ensure you have the following installed on your system:
 - Node.js (>=14.x)
-- MongoDB (Local or Cloud, like MongoDB Atlas)
+- MongoDB (local or Atlas)
 - Git
 
-### Clone the repository
-
+### Clone the Repository
 ```bash
-git clone https://github.com/jaydeep-pipaliya/MERN-Blog-Website.git
-cd MERN-Blog-Website
+git clone https://github.com/your-username/cric-fusion.git
+cd cric-fusion
 ```
 
 ### Install Dependencies
@@ -104,115 +81,65 @@ npm install
 
 ---
 
-## API Documentation
+## 🔧 Environment Variables
 
-The API is fully documented using **Swagger**. You can access the API documentation by navigating to:
-
+### Backend `.env`
 ```
-http://localhost:3000/api-docs
-```
-
-This provides a clear and interactive interface for all available API endpoints, including request/response formats, parameters, and expected status codes.
-
----
-
-## Usage
-
-### Running the Application
-
-#### Backend
-To start the Node.js/Express server (Backend):
-```bash
-npm run dev
-```
-The backend server will be running at: `http://localhost:3000`
-
-#### Frontend
-To start the React development server (Frontend):
-```bash
-cd client
-npm run dev
-```
-The frontend will be running at: `http://localhost:5173`
-
-### Admin Access
-
-Admin users have access to extra features, such as:
-- Creating blog posts
-- Deleting/Editing any user’s posts
-- Viewing details of users who liked or disliked a post
-
----
-
-## Environment Variables
-
-To run this project, you will need to set up the following environment variables in your `.env` file:
-
-#### Backend `.env`:
-
-```plaintext
-MONGO=mongodb+srv://<username>:<password>@cluster0.mongodb.net/blog-app?retryWrites=true&w=majority
+MONGO=mongodb+srv://<username>:<password>@cluster.mongodb.net/cric-fusion
 JWT_SECRET=your_jwt_secret
 GOOGLE_CLIENT_ID=your_google_client_id
 GOOGLE_CLIENT_SECRET=your_google_client_secret
+CRICKET_API_KEY=your_cricket_api_key
 ```
 
-#### Frontend `.env`:
-
-```plaintext
+### Frontend `.env`
+```
 VITE_FIREBASE_API_KEY=your_firebase_api_key
 VITE_GOOGLE_CLIENT_ID=your_google_client_id
 ```
 
 ---
 
-## Features Overview
+## 🏁 Running the App
 
-### Authentication
-- **JWT Authentication**: Ensures secure user sessions with the use of access tokens.
-- **Google OAuth**: Allows users to sign in using their Google account.
+### Backend
+```bash
+npm run dev
+# Runs on http://localhost:3000
+```
 
-### Blog Management
-- **Create, Update, Delete**: Users (with admin permissions) can create, update, and delete blog posts.
-- **Like/Dislike**: Users can like or dislike blog posts and comments.
-- **Comments**: Users can add comments to blog posts, with the ability to edit or delete their comments.
-
-### Admin Panel
-Admins have additional privileges to manage user-generated content, including the ability to:
-- View who liked/disliked specific posts
-- Delete any posts or comments
+### Frontend
+```bash
+cd client
+npm run dev
+# Runs on http://localhost:5173
+```
 
 ---
 
-## Contributing
+## 📁 API Documentation
 
-Contributions are always welcome! If you find a bug or have a suggestion for a new feature, please open an issue or submit a pull request.
+The entire backend is documented using Swagger.  
+To view API docs:
 
-To contribute:
+```bash
+Visit http://localhost:3000/api-docs
+```
+
+---
+
+## 🧑‍💻 Contributing
+
 1. Fork this repository.
-2. Create a new branch (`git checkout -b feature-branch`).
-3. Commit your changes (`git commit -m 'Add some feature'`).
-4. Push to the branch (`git push origin feature-branch`).
-5. Open a pull request.
+2. Create a branch: `git checkout -b feature-branch`.
+3. Make your changes and commit: `git commit -m "Added feature"`.
+4. Push to the branch: `git push origin feature-branch`.
+5. Open a Pull Request.
 
 ---
 
-## License
+## 📜 License
 
-This project is open source and available under the [MIT License](LICENSE).
-
----
-
-## Contact
-
-For more information, feel free to reach out:
-
-**Jaydeep Pipaliya**  
-[LinkedIn](https://www.linkedin.com/in/jaydeep-pipaliya-380905217/)  
-[Email: jbpipaliya71@gmail.com](mailto:jbpipaliya71@gmail.com)
+This project is open-source and available under the MIT License.
 
 ---
-
-This README provides all the necessary details to set up, run, and contribute to the project, ensuring that anyone who interacts with the repository understands the project structure and functionality. You can modify any part of it according to your specific requirements.
-
-Let me know if you'd like further changes or additional sections!
